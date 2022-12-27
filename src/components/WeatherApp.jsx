@@ -8,7 +8,7 @@ const WeatherApp = ({country, city, icon, gralWthr, temperature, background}) =>
     const [degBool, setDegBool] = useState(true)
     
     const toFaren = () => {
-      setCDeg(`${((temperature * 9/5) + 32)} ºF`)
+      setCDeg(`${(math.round((temperature * 9/5) + 32))} ºF`)
       setDegBool(false)
     }
     
