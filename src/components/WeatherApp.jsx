@@ -1,27 +1,28 @@
 import React, { useState } from 'react';
+import W01d from '../assets/images/W01d.jpg'
 
-const WeatherApp = ({country, city, icon, gralWthr, temperature, apparentTemp, minTemp}) => {
+const WeatherApp = ({country, city, icon, gralWthr, temperature, background}) => {
 
-    const [cDeg, setCDeg] = useState([50])
+    const [cDeg, setCDeg] = useState(temperature)
 
     const [degBool, setDegBool] = useState(true)
     
     const toFaren = () => {
-      setCDeg((cDeg * 9/5) + 32)
+      setCDeg(`${((temperature * 9/5) + 32)} ºF`)
       setDegBool(false)
     }
     
     const toCenti = () => {
-      setCDeg((cDeg - 32) * 5/9)
+      setCDeg(`${temperature} ºC`)
       setDegBool(true)
     }
     
     const changeIconandBg = () => {
-      document.body.style.backgroundImage = "url(https://img.freepik.com/premium-vector/cartoon-cat-cute-animal-doodle-kawaii-anime-coloring-page-cute-illustration-clip-art-character_51194-679.jpg?w=2000)"
+      document.body.style.backgroundImage = "url('../src/assets/images/W01d.jpg')"
     }
 
     return (
-        <div className='weather-card' style={{ background: 'cyan'}}>
+        <div className='weather-card'>
             <h1>
                 Weather App
             </h1>
@@ -32,7 +33,7 @@ const WeatherApp = ({country, city, icon, gralWthr, temperature, apparentTemp, m
             </h2>
             <section className='weather-image'>
                 <p>
-                    {temperature} ºC
+                  {cDeg ? cDeg: temperature}
                 </p>
                 <article>
                     <img className="weather-icon" src={icon} alt="" />
@@ -41,24 +42,8 @@ const WeatherApp = ({country, city, icon, gralWthr, temperature, apparentTemp, m
             <p className='wthr-name'>
                 {gralWthr}
             </p>
-            <section>
-                <article>
-                    Feel like:
-                    <b> {apparentTemp} ºC</b>
-                </article>
-                <article>
-                    Minimum temperature: 
-                    <b> {minTemp} ºC</b>
-                </article>
-            </section>
-            <p>
-        {cDeg}
-      </p>
       <button onClick={degBool ? toFaren : toCenti}>
         Change to ºC / ºF
-      </button>
-      <button onClick={changeIconandBg}>
-        changebg
       </button>
         </div>
     );

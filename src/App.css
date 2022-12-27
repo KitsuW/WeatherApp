@@ -48,6 +48,7 @@
   align-items: center;
   border-radius: 5rem;
   padding: 3rem;
+  background-color: rgba(180, 247, 247, 0.486);
 }
 
 .weather-image{
@@ -69,11 +70,13 @@
 }
 
 .weather-icon{
-  min-width: 300px;
+  min-width: 200px;
 }
 
 body{
-  color: black
+  color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wthr-name{

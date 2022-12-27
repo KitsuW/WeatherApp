@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import starfire from "./assets/images/starfire.jpg"
-import yoko from "./assets/images/yoko.png"
 import WeatherApp from './components/WeatherApp'
 import './App.css'
 
@@ -27,7 +25,8 @@ function App() {
     navigator.geolocation.getCurrentPosition(success, error);
   },[])
 
-console.log(wthr)
+    document.body.style.backgroundImage = `url('../src/assets/images/W${wthr.weather?.[0].icon}.jpg')`
+
 
   return (
     <div className="App">
@@ -37,8 +36,6 @@ console.log(wthr)
       icon= {`http://openweathermap.org/img/wn/${wthr.weather?.[0].icon}@2x.png`}
       gralWthr={wthr.weather?.[0].main}
       temperature={wthr.main?.temp}
-      apparentTemp={wthr.main?.feels_like}
-      minTemp={wthr.main?.temp_min}
       />
     </div>
   )
