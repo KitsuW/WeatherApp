@@ -25,7 +25,7 @@ function App() {
     navigator.geolocation.getCurrentPosition(success, error);
   },[])
 
-    document.body.style.backgroundImage = `url('../src/assets/images/W${wthr.weather?.[0].icon}.jpg')`
+    document.body.style.backgroundImage = `url('./assets/images/W${wthr.weather?.[0].icon}.jpg')`
 
 
   return (
