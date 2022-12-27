@@ -25,7 +25,7 @@ function App() {
     navigator.geolocation.getCurrentPosition(success, error);
   },[])
 
-    document.body.style.backgroundImage = `url('./images/W${wthr.weather?.[0].icon}.jpg')`
+    document.body.style.backgroundImage = `url('https://raw.githubusercontent.com/KitsuW/WeatherApp/main/src/assets/images/W${wthr.weather?.[0].icon}.jpg')`
 
 
   return (
