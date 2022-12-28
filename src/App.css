@@ -63,7 +63,7 @@
 }
 
 .weather-image > p{
-  font-size: 90px;
+  font-size: 35px;
 }
 
 .weather-image > article > img{
@@ -94,12 +94,17 @@ body{
     padding: .5rem;
     background-color: rgba(180, 247, 247, 0.486);
     width: 65vw;
-    height: 50vh;
+    height: 55vh;
   }
   body{
     font-size: 12px;
   }
   .weather-image > p{
-    font-size: 35px;
+    font-size: 30px;
   }
 } 
+@media only screen and (min-width: 992px) {
+  .weather-image > p{
+    font-size: 90px;
+  }
+}
