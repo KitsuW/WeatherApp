@@ -66,7 +66,7 @@
   font-size: 35px;
 }
 
-.weather-image > article > img{
+.weather-image > article > img{ 
   max-width: 300px;
 }
 
@@ -100,7 +100,7 @@ body{
     font-size: 12px;
   }
   .weather-image > p{
-    font-size: 30px;
+    font-size: 20px;
   }
 } 
 @media only screen and (min-width: 992px) {
