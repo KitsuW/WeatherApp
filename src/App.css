@@ -91,12 +91,15 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 5rem;
-    padding: 3rem;
+    padding: .5rem;
     background-color: rgba(180, 247, 247, 0.486);
-    width: 70vw;
-    height: 45vh;
+    width: 50vw;
+    height: 35vh;
   }
   .weather-image > p{
-    font-size: 50px;
+    font-size: 35px;
+  }
+  body{
+    font-size: smaller;
   }
 } 
