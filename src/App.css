@@ -93,13 +93,13 @@ body{
     border-radius: 5rem;
     padding: .5rem;
     background-color: rgba(180, 247, 247, 0.486);
-    width: 50vw;
-    height: 35vh;
+    width: 55vw;
+    height: 45vh;
+  }
+  body{
+    font-size: 12px;
   }
   .weather-image > p{
     font-size: 35px;
-  }
-  body{
-    font-size: smaller;
   }
 } 
