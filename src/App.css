@@ -54,6 +54,7 @@
 .weather-image{
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .weather-image > article{
@@ -82,3 +83,20 @@ body{
 .wthr-name{
   font-size: 50px;
 }
+
+@media only screen and (max-width: 600px) {
+  .weather-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    padding: 3rem;
+    background-color: rgba(180, 247, 247, 0.486);
+    width: 70vw;
+    height: 45vh;
+  }
+  .weather-image > p{
+    font-size: 50px;
+  }
+} 
